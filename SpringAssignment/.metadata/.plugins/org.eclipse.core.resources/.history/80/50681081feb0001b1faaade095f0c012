@@ -1,0 +1,8 @@
+package com.cg.bean;
+
+public class SBU {
+	private int sbuId;
+	private String sbuName; 
+	private String sbuHead; 
+
+}

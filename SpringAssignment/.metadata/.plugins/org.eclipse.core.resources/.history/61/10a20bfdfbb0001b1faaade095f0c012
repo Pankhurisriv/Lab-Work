@@ -1,0 +1,22 @@
+package com.cg.ui;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App1 {
+
+	public static void main(String[] args) {
+		
+		
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("beans1.xml");
+		CountService countService=context.getBean("countBean", CountService.class);
+	   System.out.println(countService.getCount());
+		
+		CountService countService2=context.getBean("countBean", CountService.class);
+		   System.out.println(countService2.getCount());
+		   
+		   System.out.println(context.isPrototype("countBean"));
+		   System.out.println(context.isSingleton("countBean"));
+		   context.close();
+
+	}
+}
