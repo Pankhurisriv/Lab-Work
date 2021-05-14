@@ -1,0 +1,7 @@
+CREATE TABLE trainee(
+trainee_id number(20) CONSTRAINTS trainee_trainee_id_pk PRIMARY KEY,
+trainee_name varchar2(30) constraint trainee_trainee_name_nn NOT NULL,
+trainee_domain varchar2(50) constraint trainee_trainee_domain_nn NOT NULL,
+trainee_location varchar2(30) constraint trainee_trainee_nn NOT NULL
+);
+
